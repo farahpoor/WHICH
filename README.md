@@ -34,6 +34,6 @@ check_md5.php  : for checking integrity of php files by creating md5 hash of eac
 
 2. run create_md5.php once which creates md5 hash for all files in provided directories.
 
-3. by using this tutorial[tutorial](https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/) create cron job for running check_md5.php periodically.
+3. by using this [tutorial](https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/) create cron job for running check_md5.php periodically.
 
 
