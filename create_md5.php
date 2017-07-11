@@ -1,12 +1,6 @@
 <?php
 	include('./config.php');
-// Create connection
-		$conn = new mysqli($servername, $username, $password, $db_name);
-		// Check connection
-		if ($conn->connect_error) {
-			die("Connection failed: " . $conn->connect_error);
-		} 
-		// sql to delete a record
+		// sql to truncate table
 		$sql = "truncate table file_md5";
 		
 		if ($conn->query($sql) === TRUE) {
