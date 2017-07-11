@@ -34,4 +34,6 @@ $from: email address of your website (such as: info@example.com).
 $to: email of yours (such as : me@gmail.com).
 $subject: subject of email
 
-4. by using this tutorial create
+4. by using this tutorial[tutorial](https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/) create cron job for running check_md5.php periodically.
+
+
