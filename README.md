@@ -18,19 +18,19 @@ this project has two main files:
 create_md5.php : for creating md5 hash of php files in specified path and insert them to the file_md5 table in database.
 check_md5.php  : for checking integrity of php files by creating md5 hash of each file and comparing it with md5 hash of each file in the database, and if can detect contrariety, send an email to the owner.
 
-1. create a table in your database : file_md5 with this 4 columns : ID,File_Name,Source_File_Path,MD5
+1. create a table in your database : file_md5 with these 4 columns : ID,File_Name,Source_File_Path,MD5
 
-then update config.php  with your database credential.
+  then update config.php  with your database credential.
 
-and 
+  and 
 
-$web_path: address of your files on the server(such as "/public_html/").
+  $web_path: address of your files on the server(such as "/public_html/").
 
-$from: email address of your website (such as: info@example.com).
+  $from: email address of your website (such as: info@example.com).
 
-$to: email of yours (such as : me@gmail.com).
+  $to: email of yours (such as : me@gmail.com).
 
-$subject: subject of email
+  $subject: subject of email
 
 2. run create_md5.php once which creates md5 hash for all files in provided directories.
 
