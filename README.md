@@ -26,14 +26,14 @@ and
 
 $web_path: address of your files on the server(such as "/public_html/").
 
-2. run create_md5.php once which creates md5 hash for all files in provided directories.
-
-3. update these variables in check_md5.php correspond to yours:
-
 $from: email address of your website (such as: info@example.com).
+
 $to: email of yours (such as : me@gmail.com).
+
 $subject: subject of email
 
-4. by using this tutorial[tutorial](https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/) create cron job for running check_md5.php periodically.
+2. run create_md5.php once which creates md5 hash for all files in provided directories.
+
+3. by using this tutorial[tutorial](https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/) create cron job for running check_md5.php periodically.
 
 
