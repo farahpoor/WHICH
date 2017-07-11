@@ -1,12 +1,5 @@
 <?php
-	if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip')) ob_start("ob_gzhandler"); else ob_start();
 	include('./config.php');
-	// Create connection
-	$conn = new mysqli($servername, $username, $password, $db_name);
-	// Check connection
-	if ($conn->connect_error) {
-		die("Connection failed: " . $conn->connect_error);
-	} 
 	
 	$row_count=1;
 	$problem_array=[[]];
