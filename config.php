@@ -4,10 +4,10 @@ $username="*****"; // Mysql username
 $password="*****"; // Mysql password
 $db_name="mydatabase"; // Database name
 
-$web_path="./public_html/" //address of your files on the server(such as "/public_html/").
+$web_path="/public_html/" //address of your files on the server(such as "/public_html/").
 $from="info@example.com " //email address of your website (such as: info@example.com).
 $to= "me@gmail.com" //email of yours (such as : me@gmail.com).
-$subject="The Webi files have been Threatened"  //subject of email
+$subject="The Web files have been Threatened"  //subject of email
 
 
 // Create connection
@@ -16,3 +16,5 @@ $conn = new mysqli($host, $username, $password, $db_name);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+
+?>
