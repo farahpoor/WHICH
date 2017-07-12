@@ -1,15 +1,13 @@
 <?php
 	include('./config.php');
 		// sql to truncate table
-		$sql = "truncate table file_md5";
+		$sql = "truncate table file_sha512";
 		
 		if ($conn->query($sql) === TRUE) {
 			echo "Table Truncated";
 			} else {
 			echo "Error truncating table: " . $conn->error;
 		}
-
-
 	function getDirContents($dir, $filter = '', &$results = array()) {
 		$files = scandir($dir);
 		
@@ -25,18 +23,13 @@
 		
 		return $results;
 	} 
-
-
-
 	$myarray=getDirContents($web_path, '/\.php$/');
-
-
 	foreach ($myarray as $path) {
 		$filename=basename($path);
-		$md5_hash=md5_file($path,false);
-		echo "file: " . $filename . "    md5: " . $md5_hash . "<br>";
+		$sha512_hash=hash('sha512', $path);
+		echo "file: " . $filename . "    sha512: " . $sha512_hash . "<br>";
 		
-		$sql = "INSERT INTO file_md5 (File_Name, Source_File_Path, MD5) VALUES ('$filename', '$path', '$md5_hash')";
+		$sql = "INSERT INTO file_sha512 (File_Name, Source_File_Path, sha512) VALUES ('$filename', '$path', '$sha512_hash')";
 		
 		if ($conn->query($sql) === TRUE) {
 			echo "New record created successfully";
