@@ -47,3 +47,6 @@ when you change any php files of your website you must run create_md5.php for up
 
 # Future
 I am trying to provide an option to this project which can replace tampered files with original files automatically at any time it finds contrariety.
+
+#Disclaimer
+there is no responsibility for any loss or damage suffered as a result of using this script, always backup your stuff first.
