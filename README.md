@@ -1,5 +1,6 @@
 # WHICH
 Web Host Integrity Check : Open Source File Integrity Monitoring with specific aim on protecting PHP files against modification
+
 File Integrity Monitoring(FIM) is a process which executes cryptographic hash functions to producing hash of each files that must be protected and automatically and periodically compares the hash of original file with calculated hash of the current state of the file and if it finds any contrariety it will send an email to administrator about this issue.
 
 ![alt text](http://www.onlinetech.com/images/diagrams/fim-diagram.png)
