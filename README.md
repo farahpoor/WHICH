@@ -1,8 +1,11 @@
 # WHICH
-Web Host Integrity Check 
-File Integrity Monitoring is 
+Web Host Integrity Check : Open Source File Integrity Monitoring with specific aim on protecting PHP files against modification
+File Integrity Monitoring(FIM) is a process which executes cryptographic hash functions to producing hash of each files that must be protected and automatically and periodically compares the hash of original file with calculated hash of the current state of the file and if it finds any contrariety it will send an email to administrator about this issue.
 
 ![alt text](http://www.onlinetech.com/images/diagrams/fim-diagram.png)
+
+Image source: http://www.onlinetech.com
+
 According to this topic there is a Trojan With name : [PHP.Anuna](https://www.symantec.com/security_response/writeup.jsp?docid=2015-111911-4342-99&tabid=2) . read about that in Symantec website.
 
 attackers can inject a code to all PHP files in web host and by using that can compromises the website's visitors.
@@ -36,7 +39,10 @@ check_md5.php  : for checking integrity of php files by creating md5 hash of eac
 
 2. run create_md5.php once which creates md5 hash for all files in provided directories.
 
-3. by using this [tutorial](https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/) create cron job for running check_md5.php periodically.
+3. by using this [tutorial](https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/) create cron job for running check_md5.php periodically. or if your website has cpanel use cron jobs on that.
 
-# maintenance
+# Maintenance
 when you change any php files of your website you must run create_md5.php for updating md5 hashes.
+
+# Future
+I am trying to provide an option to this project which can replace tampered files with original files automatically at any time it finds contrariety.
