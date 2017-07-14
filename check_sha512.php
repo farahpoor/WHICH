@@ -56,7 +56,7 @@
 	echo "<table border='1'><tr><td>Row</td><td>File Name</td><td>Path</td><td>sha512 Hash</td><td>Status</td></tr>";
 	foreach ($result_array as $path) {
 		$filename=basename($path);
-		$sha512_hash=hash('sha512', $path);		
+		$sha512_hash=hash_file('sha512', $path,false);		
 		echo "<tr><td>" . $row_count . "</td><td>" . $filename . "</td><td>".$path ."</td><td>" . $sha512_hash . "</td>";
 		
 		$sql = "SELECT * FROM file_sha512 WHERE Source_File_Path='$path'";		
