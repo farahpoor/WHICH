@@ -26,7 +26,7 @@
 	$myarray=getDirContents($web_path, '/\.php$/');
 	foreach ($myarray as $path) {
 		$filename=basename($path);
-		$sha512_hash=hash_file('sha512', $path,flase);
+		$sha512_hash=hash_file('sha512', $path,false);
 		echo "file: " . $filename . "    sha512: " . $sha512_hash . "<br>";
 		
 		$sql = "INSERT INTO file_sha512 (File_Name, Source_File_Path, sha512) VALUES ('$filename', '$path', '$sha512_hash')";
