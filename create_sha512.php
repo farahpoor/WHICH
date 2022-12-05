@@ -4,7 +4,7 @@
 		$sql = "truncate table file_sha512";
 		
 		if ($conn->query($sql) === TRUE) {
-			echo "Table Truncated";
+			echo "Table Truncated </br>";
 			} else {
 			echo "Error truncating table: " . $conn->error;
 		}
@@ -26,10 +26,11 @@
 	$myarray=getDirContents($web_path, '/\.php$/');
 	foreach ($myarray as $path) {
 		$filename=basename($path);
-		$sha512_hash=hash_file('sha512', $path,false);
-		echo "file: " . $filename . "    sha512: " . $sha512_hash . "<br>";
+		$sha512_hash=hash_file($hash_function, $path,false);
+    	$Date_Time=date("Y-m-d H:i:s");
+		echo "file: " . $filename . "    sha512: " . $sha512_hash . "          Date: " . $Date_Time .  "<br>";
 		
-		$sql = "INSERT INTO file_sha512 (File_Name, Source_File_Path, sha512) VALUES ('$filename', '$path', '$sha512_hash')";
+		$sql = "INSERT INTO file_sha512 (File_Name, Source_File_Path, sha512, Date_Time) VALUES ('$filename', '$path', '$sha512_hash', '$Date_Time')";
 		
 		if ($conn->query($sql) === TRUE) {
 			echo "New record created successfully";
