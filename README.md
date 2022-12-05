@@ -28,8 +28,11 @@ check_sha512.php  : for checking integrity of php files by creating sha512 hash 
 ID (auto increment)
 
 File_Name(var char)
+
 Source_File_Path(var char)
+
 sha512 (var char)
+
 Date_Time(datetime)
 
   then update config.php  with your database credential.
