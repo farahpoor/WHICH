@@ -57,7 +57,7 @@
 	foreach ($result_array as $path) 
     {
 		$filename=basename($path);
-		$sha512_hash=hash_file('sha512', $path,false);		
+		$sha512_hash=hash_file($hash_function, $path,false);		
 		
 		$sql = "SELECT * FROM file_sha512 WHERE Source_File_Path='$path'";		
 		$result = $conn->query($sql);
@@ -75,6 +75,7 @@
                 	{
                 		echo "<tr><td>" . $row_count . "</td><td>" . $filename . "</td><td>".$path ."</td><td>" . $sha512_hash . "</td>";
                 		echo "<td><div style='color: red'>Not Matched</div></td>"; 
+                		echo "<td>" . $row['Date_Time'] . "</td>"; 
                 		$nm++; 
                 		$problem_array[$problem_counter][0]=$path;
                 		$problem_array[$problem_counter][1]="Not Mached";
@@ -85,6 +86,7 @@
         	{ 
         		echo "<tr><td>" . $row_count . "</td><td>" . $filename . "</td><td>".$path ."</td><td>" . $sha512_hash . "</td>";
         		echo "<td><div style='color: #ff9900'>Not Found</div></td></tr>"; 
+        		echo "<td>" . "Null" . "</td>"; 
         		$nf++; 
         		$problem_array[$problem_counter][0]=$path;
         		$problem_array[$problem_counter][1]="Not Found";
