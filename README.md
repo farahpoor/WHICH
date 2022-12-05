@@ -38,8 +38,6 @@ check_sha512.php  : for checking integrity of php files by creating sha512 hash 
 
   then update config.php  with your database credential.
 
-  and 
-
   $web_path: address of your files on the server(such as "/public_html/").
 
   $from: email address of your website (such as: info@example.com).
