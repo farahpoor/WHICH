@@ -24,7 +24,13 @@ this project has two main files:
 create_sha512.php : for creating sha512 hash of php files in specified path and insert them to the file_sha512 table in database.
 check_sha512.php  : for checking integrity of php files by creating sha512 hash of each file and comparing it with sha512 hash of each file in the database, and if can detect contrariety, send an email to the owner.
 
-1. create a table in your database : file_sha512 with these 5 columns : ID (auto increment),File_Name(var char),Source_File_Path(var char),sha512 (var char),Date_Time(datetime)
+1. create a table in your database : file_sha512 with these 5 columns : 
+ID (auto increment)
+
+File_Name(var char)
+Source_File_Path(var char)
+sha512 (var char)
+Date_Time(datetime)
 
   then update config.php  with your database credential.
 
