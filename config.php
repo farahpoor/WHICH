@@ -1,10 +1,12 @@
 <?php
 $host="localhost"; // Host name
-$username="*****"; // Mysql username
-$password="*****"; // Mysql password
-$db_name="mydatabase"; // Database name
+$username="******"; // Mysql username
+$password="******"; // Mysql password
+$db_name="*******"; // Database name
 
-$web_path="/public_html/"; //address of your files on the server(such as "/public_html/").
+$web_path="/var/www/magento2/"; //address of your files on the server(such as "/public_html/").
+$hash_function='sha1';
+
 $from="info@example.com"; //email address of your website (such as: info@example.com).
 $to= "me@gmail.com"; //email of yours (such as : me@gmail.com).
 $subject="The Web files have been Threatened";  //subject of email
